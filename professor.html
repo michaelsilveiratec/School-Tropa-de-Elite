@@ -2,23 +2,44 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Professor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Professores</title>
   <link rel="stylesheet" href="css.css">
+  <script src="professor.js" defer></script>
+  <link rel="stylesheet" href="js.css">
 </head>
 <body>
   <div class="topo">
-    <h1>Cadastro de Professor</h1>
-    <p>Gerencie os professores da plataforma</p>
+    <h1>Cadastro de Professores</h1>
+    <p>Adicione os dados dos professores abaixo:</p>
   </div>
 
   <div class="conteudo">
-    <button onclick="cadastrarProfessor()" class="btn">Cadastrar Professor</button>
+    <!-- Formulário para adicionar professores -->
+    <form id="formProfessor">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required><br><br>
+
+      <label for="disciplina">Disciplina:</label>
+      <input type="text" id="disciplina" name="disciplina" required><br><br>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <button type="submit">Adicionar Professor</button>
+      <button type="button" id="btnExcluirTodos">Excluir</button>
+    </form>
+
+    <h2>Lista de Professores Cadastrados:</h2>
+
+    <!-- Lista para exibir os professores cadastrados -->
+    <ul id="listaProfessores">
+      <!-- Os dados dos professores serão inseridos aqui -->
+    </ul>
   </div>
 
   <div class="rodape">
     @SCHOOL TROPA DE ELITE - Todos os direitos reservados.
   </div>
-
-  <script src="professor.js"></script>
 </body>
 </html>
