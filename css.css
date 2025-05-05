@@ -105,3 +105,26 @@ body {
   list-style: none; /* Remove os marcadores padrão da lista */
   justify-content: center; /* Centraliza os itens horizontalmente */
 }
+
+.item-turma {
+  border: 1px solid #7300d8;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #5908d2;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  overflow: hidden;
+}
+
+#listaTurmas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+}

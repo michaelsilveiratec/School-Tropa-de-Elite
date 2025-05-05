@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Turma</title>
-  <link rel="stylesheet" href="css.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Turmas</title>
+  <link rel="stylesheet" href="css.css" />
+  <link rel="stylesheet" href="js.css" />
+  <script src="turma.js" defer></script>
 </head>
 <body>
   <div class="topo">
-    <h1>Cadastro Turma</h1>
-    <p>Gerencie as Turmas</p>
+    <h1>Cadastro de Turmas</h1>
+    <p>Adicione as turmas abaixo:</p>
   </div>
 
   <div class="conteudo">
-    <button onclick="cadastrarProfessor()" class="btn">Cadastrar Turma</button>
+    <form id="formTurma">
+      <label for="nomeTurma">Nome da Turma:</label>
+      <input type="text" id="nomeTurma" placeholder="Ex: Turma A" required /><br><br>
+
+      <label for="anoTurma">Ano:</label>
+      <input type="text" id="anoTurma" placeholder="Ex: 2025" required /><br><br>
+
+      <label for="turnoTurma">Turno:</label>
+      <input type="text" id="turnoTurma" placeholder="Ex: Manhã" required /><br><br>
+
+      <button type="submit">Cadastrar Turma</button>
+      <button type="button" id="btnExcluirTodos">Excluir Todas</button>
+    </form>
+
+    <h2>Lista de Turmas Cadastradas:</h2>
+    <ul id="listaTurmas"></ul>
   </div>
 
   <div class="rodape">
     @SCHOOL TROPA DE ELITE - Todos os direitos reservados.
   </div>
-
-  <script src="professor.js"></script>
 </body>
 </html>
